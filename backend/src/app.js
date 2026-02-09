@@ -8,7 +8,11 @@ const compression = require("compression")
 app.use(compression())
 app.use(cookieParser())
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+  origin: "https://your-frontend-url.onrender.com",
+  credentials: true
+}));
+
 app.use(express.static('./public'))
 
 

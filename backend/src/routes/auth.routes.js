@@ -70,8 +70,8 @@ authRouter.post('/register', async (req, res) => {
     res.cookie('Token', token,
         {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "none"
         }
     )
 
@@ -144,7 +144,7 @@ authRouter.post('/logout', (req, res) => {
     res.clearCookie("Token", {
         httpOnly: true,
         secure: false,
-        sameSite: "strict"
+        sameSite: "none"
     });
 
     res.status(200).json({
