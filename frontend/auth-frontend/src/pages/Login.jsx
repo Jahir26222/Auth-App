@@ -39,7 +39,7 @@ export default function Login() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="title">Welcome Back 👋</h1>
+        <h1 className="title">Welcome Back 🏆</h1>
         <p className="subtitle">Login to continue</p>
 
         {msg && <p className="msg">{msg}</p>}
@@ -65,7 +65,7 @@ export default function Login() {
               className="toggle-btn"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? "🙈" : "👁️"}
+              {showPassword ? <i className="ri-eye-off-line" id="icon"></i> : <i className="ri-eye-line" id="icon"></i>}
             </span>
           </div>
 

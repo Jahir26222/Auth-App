@@ -95,7 +95,7 @@ export default function Register() {
               className="toggle-btn"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? "🙈" : "👁️"}
+              {showPassword ? <i className="ri-eye-off-line" id="icon"></i> : <i className="ri-eye-line" id="icon"></i>}
             </span>
           </div>
 
