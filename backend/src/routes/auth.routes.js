@@ -177,10 +177,10 @@ authRouter.post("/send-otp", async (req, res) => {
 
         // 6. Send mail
         await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+            from: "thaAJ<itsjahir8511@gmail.com>",
             to: email,
             subject: "Your OTP Verification Code",
-            text: `Your OTP is ${otp}. It will expire in 5 minutes.`
+            text: `Your OTP is ${otp}.`
         });
 
         res.status(200).json({
